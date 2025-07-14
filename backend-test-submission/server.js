@@ -17,8 +17,9 @@ mongoose.connect(process.env.DATABASE_URI)
 
 app.use('/shorturls',shortUrlRoutes);
 
-app.use('/:shortcode',require('./routes/redirectRoute'));
+app.use('/', require('./routes/redirectRoute'));
 
+app.use("/frontend-log", require("./routes/logRoute"));
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);

@@ -11,6 +11,9 @@ const getAuthToken = async () => {
       clientID: "c440f451-a2ec-4ad6-adbc-c42b78624009",
       clientsecret: "exXYUxJTNgmYNNSP"
     });
+    // console.log token in auth.js
+console.log("Access Token:", response.data["access_token"]);
+
 
     return response.data["access_token"];
   } catch (err) {
